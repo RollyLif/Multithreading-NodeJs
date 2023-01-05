@@ -8,10 +8,6 @@ app.get("/non-blocking/", (req, res) => {
 });
 
 app.get("/blocking", async (req, res) => {
-    let counter = 0;
-    for (let i = 0; i < 20_000_000_000; i++) {
-      counter++;
-    }
     res.status(200).send(`result is ${counter}`);
   });
 
